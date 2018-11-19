@@ -1,0 +1,596 @@
+body{
+	padding:0;
+	margin:0;
+}
+body,html{
+	height: 100%;
+	overflow: hidden;
+}
+.door-box {
+    max-width: 100%;
+    width: 414px; height: 100%;
+    margin:0 auto;
+    background-color: #A45B26;
+    font-family: STHeiTi, SimHei;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.door-box.active {
+    animation: flyIntoRoom 1s both;
+}
+.door-box div {
+    position: absolute;
+}
+.wall {
+    left: 0; top: 0; right: 0; bottom: 46px;
+    border-bottom: 3px solid #592D14;
+    background-color: #F5F5F5;
+    max-height: calc(1.8 * (414px - 80px));
+    margin: auto;
+    box-shadow: 0 -200px #F5F5F5;
+}
+.door-border {
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 0;
+    border: 3px solid #211820;
+    border-radius: 2px 2px 0 0;
+    border-bottom: 0;
+    background-color: #C68E03;
+}
+.door-frame {
+    top: 10px; left: 9px; right: 9px; bottom: 0;
+    border: 3px solid #211820;
+    border-radius: 2px 2px 0 0;
+    border-bottom: 0;
+    background: url(../images/bj1.jpg) no-repeat;
+    background-size:100% 100%;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+}
+.door {
+    left: 0; top: 0; right: 0;  bottom: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transform: rotateY(0deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 3;
+}
+.door-face-1,
+.door-face-0 {
+    left: -3px; top: -3px; right: -3px; bottom: -3px;
+    border: 3px solid #211820;
+    background-color: #9A6B59;
+}
+.door-face-0 {
+    transform: translateZ(-12px);
+}
+.door-face-1 {
+    transform: translateZ(0);
+}
+.door-face-2 {
+    height: 6px;
+    left: -3px; right: -3px; top: 0;
+    border: 3px solid #211820;
+    border-radius: 2px;
+    background-color: #0c2e59;
+    transform: translate3D(0, -7.5px, -6px) rotateX(90deg);
+}
+.door-face-3 {
+    width: 6px;
+    top: -3px; right: 0; bottom: -3px;
+    border: 3px solid #211820;
+    border-radius: 2px;
+    background-color: #C68E03;
+    transform: translate3D(7.5px, 0, -6px) rotateY(90deg);
+}
+/*光线*/
+.light {
+    left: 0; top: 0; bottom: 0;
+    background:#fff;
+    width: 1000px;
+    transform: translateZ(-13px);
+}
+/*门牌*/
+.door-card {
+    width: 165px; height: 60px;
+    line-height: 60px;
+    background-color: #c1d0ec;
+    top: 60px; left: 0; right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    border: 3px solid;
+    border-radius: 2px;
+}
+.door-btn {
+    left: 0; right: 0;
+    text-align: center;
+    margin-top: 140px;
+    font-size: 24px;
+    color: #9dbce3;
+    line-height: 36px;
+}
+.door-in {
+    width: 104px; height: 40px;
+    border-radius: 40px;
+    border: 2px solid;
+    line-height: 40px;
+    background-color: #eacc86;
+    font-family: inherit; font-size: 24px;
+    padding: 0; margin: 10px 0;
+}
+/* 动画 */
+@keyframes flyIntoRoom {
+    from {
+        transform: scale(1) translateZ(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(2) translateZ(100px);
+        opacity: 0;
+        display: none;
+    }
+}
+.room-img {
+    position: absolute;
+    width: 414px; max-width: 100%;
+    left: 0; right: 0; top: 40px;
+    margin: auto;
+}
+/*ziji*/
+.doorNumber{
+	position: absolute;
+	top:30px;
+	left:0;
+	right:0;
+	text-align:center;
+	font-size: 44px;
+	color:#FDD76E;
+	letter-spacing:.1em;
+	font-family: "Romantic";
+}
+.doorHawkEye{
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	top:100px;
+	left:50%;
+	margin-left: -9px;
+	background: red;
+	border-radius: 50%;
+	border:2px solid #6A5F61;
+	background: #C6F2FA;
+}
+.doorHawkEye .eyeCenter{
+	width: 6px;
+	height: 6px;
+	background:#66CAE2;
+	position: absolute;
+	top:4px;
+	left:4px;
+	border-radius: 50%;
+}
+.doorBuckle{
+	width:6px;
+	height:7%;
+	background: #FCD86E; 
+	position: absolute;
+}
+.buckle1{
+	top:20%;
+	left:0;
+}
+.buckle2{
+	bottom:20%;
+	left:0;
+}
+.doorBuckle>div{
+	width:100%;
+	height:40%;
+	background:#E7A845; 
+	position: absolute;
+	top:30%;
+	left:0;
+}
+.doorKeyholeBox{
+	width: 50px;
+	height:80px;
+	background: #FCD86E;
+	position: absolute;
+	right:20px;
+	top:45%;
+}
+.doorbell{
+	width:14px;
+	height:14px;
+	border-radius:50%;
+	background: #F5E19D;
+	border:5px solid #DDA84A;
+	position: absolute;
+	left:50%;
+	bottom:10px;
+	margin-left: -12px;
+}
+.bellText{
+	width: 100%;
+	letter-spacing: .1em;
+	line-height:50px;
+	text-align: center;
+	color: #FFF7E3;
+	font-size: 20px;
+}
+.door-face-1 button{
+	width: 70%;
+	height: 35px;
+	border:1.5px solid #C98621;
+	border-radius:5px;
+	text-align: center;
+	position: absolute;
+	left:50%;
+	top:30%;
+	margin-left: -35%;
+	color:#fff;
+	background: transparent;
+	animation-delay:1s;
+	-webkit-animation-delay:1s; /* Safari 和 Chrome */
+}
+/*门内*/
+.RoomBox{
+	max-width: 100%;
+    width: 414px;height: 100%;
+    background: url(../images/bj3.jpg) no-repeat;
+    background-size:100% 100%;
+    overflow: hidden;
+    position: relative;
+	display: none;
+	/*margin:40px auto;*/
+}
+.redballoon{
+	position: absolute;
+	top:70px;
+	right:56px;
+	transform:rotate(0deg);
+	animation: flyRBalloon 3s infinite both;
+	animation-iteration-count:infinite;
+}
+.blueballoon{
+	position: absolute;
+	top:130px;
+	right:0px;
+	animation: flyBalloon 2s forwards,flyRBalloon 3s infinite 2s;
+}
+/* 动画 */
+@keyframes flyBalloon {
+    0% {
+        top:130px;
+		right:0px;
+    }
+    100% {
+        top:115px;
+		right:8px;
+    }
+}
+@keyframes flyRBalloon {
+    0% {
+        transform:scale(0.95);
+    }
+    50% {
+        transform:scale(1);
+    }
+    100% {
+        transform:scale(0.95);
+    }
+}
+.heart{
+	width: 30px;
+	height: 30px;
+	/*background: blue;*/
+	text-align: center;
+	line-height: 30px;
+	font-size: 24px;
+	color: red;
+	position: absolute;
+	z-index: 999;
+	animation: flyHeart 3s linear forwards;
+}
+@keyframes flyHeart{
+	0% {
+        transform:translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform:translateY(-100px);
+        opacity:0.5;
+    }
+    90% {
+    	transform:translateY(-130px);
+        opacity:0.1;
+    }
+    100% {
+    	transform:translateY(-130px);
+       	opacity:0;
+       	display: none;
+    }
+}
+.totalMessage{
+	position: absolute;
+	height: 300px;
+	bottom: 0;
+	left:0;
+	right:0;
+	display: none;
+}
+.messageBox{
+	height:100px;
+	position: absolute;
+	left:0px;
+	right:0px;
+	bottom: 200px;
+}
+.messageBox2{
+	bottom: 100px;
+}
+.messageBox3{
+	bottom: 0px;
+}
+.daughter{
+	width:80px;
+	height:80px;
+	position: absolute;
+	left:30px;
+	top:10px;
+	border-radius: 50%;
+}
+.message{
+	width:150px;
+	height: 30px;
+	background: #FF7474;
+	/*border:1px solid blue;*/
+	border-radius: 3px;
+	position: absolute;
+	left:130px;
+	top:35px;
+}
+.message:after, .message:before {
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    top: 100%;
+    position: absolute;
+    width: 0;
+}
+
+.message:after {
+    border-width:5px;
+    border-right-color: #FF7474;
+    left:-9px;
+    top:10px;
+}
+.messageBox2 .message{
+	background: #DAEF88;
+}
+.messageBox3 .message{
+	background: #6E9CE1;
+}
+.messageBox2 .message:after {
+    border-right-color: #DAEF88;
+}
+.messageBox3 .message:after {
+    border-right-color: #6E9CE1
+}
+.messageBox2 .daughter,.messageBox2 .message{
+	animation-delay:1s;
+	-webkit-animation-delay:1s;
+}
+.messageBox3 .daughter,.messageBox3 .message{
+	animation-delay:2s;
+	-webkit-animation-delay:2s;
+}
+.GiftBox{
+	width:100%;
+	height: 500px;
+	position: absolute;
+	right:30px;
+	bottom:50px;
+	z-index: 3;
+	animation-duration:5s;
+	-webkit-animation-duration:5s; /* Safari 和 Chrome */
+}
+.openGift{
+	width: 120px;
+	height: 30px;
+	background: #fff;
+	border:1px solid #F5D198;
+	border-radius: 3px;
+	margin:0 auto; 
+	position: absolute;
+	bottom:80px;
+	left:0;
+	right:0;
+	color: #4B4646;
+	text-align: center;
+	line-height: 30px;
+	z-index: 4;
+	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite; /* Safari 和 Chrome */
+}
+.careBox{
+	position: absolute;
+	width: 220px;
+	height: 220px;
+	background: rgba(224,91,123,0.5);
+	border-radius: 50%;
+	/*bottom:120px;*/
+	top:38%;
+	left:50%;
+	margin-left: -110px;
+}
+.velas {
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 82px;
+  left: 50%;
+  margin-left: -2.5px;
+  /*margin-top: -8.33333333px;*/
+  width: 5px;
+  height: 35px;
+  -webkit-transform: translateY(-600px);
+  -ms-transform: translateY(-600px);
+  transform: translateY(-600px);
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: in 600ms 6s ease-out forwards;
+  animation: in 600ms 6s ease-out forwards;
+}
+
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== Fire
+*/
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.2px;
+  width: 6.66666667px;
+  height: 18px;
+}
+
+.fuego:nth-child(1) {
+  -webkit-animation: fuego 2s 6.5s infinite;
+  animation: fuego 2s 6.5s infinite;
+}
+
+.fuego:nth-child(2) {
+  -webkit-animation: fuego 1.5s 6.5s infinite;
+  animation: fuego 1.5s 6.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  -webkit-animation: fuego 1s 6.5s infinite;
+  animation: fuego 1s 6.5s infinite;
+}
+
+.fuego:nth-child(4) {
+  -webkit-animation: fuego 0.5s 6.5s infinite;
+  animation: fuego 0.5s 6.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  -webkit-animation: fuego 0.2s 6.5s infinite;
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+/* ============================================== Animation Fire
+*/
+@-webkit-keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+  }
+}
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+  }
+}
+@-webkit-keyframes in {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes in {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+#cake {
+  display: block;
+  position: relative;
+  margin: -300px auto 0 auto;
+}
+.Blessings{
+	position: absolute;
+	/*bottom:20px;*/
+	top:75%;
+	left:0;
+	right:0;
+	font-size:16px;
+	display: none;
+}
+.Blessings .happy{
+	height:50px;
+	background: url(../images/1.png) no-repeat;
+    background-size:100% 100%;
+	animation-delay:5s;
+	-webkit-animation-delay:5s;
+}
+.Blessings .evryDay{
+	padding:0 10px;
+	background-image: -webkit-linear-gradient(left, #FF8383 10%, #FFE081 30%,
+            #ACD564 50%, #86BCFA 70%, #FAC486 80%, #ffd400 90%, #A286FA);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	animation-delay:5.5s;
+	-webkit-animation-delay:5.5s;
+}
+.Blessings .name{
+	padding:0 10px;
+	font-size: 14px;
+	float: right;
+	line-height: 30px;
+	color: #646262;
+	animation-delay:5.5s;
+	-webkit-animation-delay:5.5s;
+}

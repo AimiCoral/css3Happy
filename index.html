@@ -3,65 +3,182 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<title></title>
+
+	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		html, body {
+	      position: relative;
+	      height: 100%;
+	    }
+	    body {
+	      background: #eee;
+	      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	      font-size: 14px;
+	      color:#000;
+	      margin: 0;
+	      padding: 0;
+	    }
+	    .swiper-container {
+	      width: 100%;
+	      height: 100%;
+	    }
+	    .swiper-slide {
+	      text-align: center;
+	      font-size: 18px;
+	      background: #fff;
 
+	      /* Center slide text vertically */
+	      display: -webkit-box;
+	      display: -ms-flexbox;
+	      display: -webkit-flex;
+	      display: flex;
+	      -webkit-box-pack: center;
+	      -ms-flex-pack: center;
+	      -webkit-justify-content: center;
+	      justify-content: center;
+	      -webkit-box-align: center;
+	      -ms-flex-align: center;
+	      -webkit-align-items: center;
+	      align-items: center;
+	    }
+	    .nextPage{
+	    	width:2rem;
+	    	height:2rem;
+	    	/*background:rgba(0,0,0,0.3);*/
+	    	border-radius: 50%;
+	    	position: absolute;
+	    	bottom:1rem;
+	    	left:50%;
+	    	margin-left: -1rem;
+	    	z-index:999;
+	    	font-size: 20px;
+	    	line-height: 2.5rem;
+	    	text-align: center;
+	    	animation-iteration-count:infinite;
+	    }
+	</style>
 </head>
 <body>
-	<div id="doorBox" class="door-box">
-	    <div class="wall">
-	        <div class="door-border">
-	            <div class="door-frame">
-	                <!-- 门 -->
-	                <div id="door" class="door">
-	                    <!-- 门后的光线 -->
-	                    <div id="light" class="light" style="opacity: .8;" hidden=""></div>
-	                    <!-- 门后 -->
-	                    <div class="door-face-0"></div>
-	                    <!-- 三个面 -->
-	                    <div class="door-face-2"></div>            
-	                    <div class="door-face-1">
-	                    	<div class="doorNumber">1029</div>
-							<div class="doorHawkEye">
-								<div class="eyeCenter"></div>
-							</div>
-							<div class="doorBuckle buckle1">
-								<div></div>
-							</div>
-							<div class="doorBuckle buckle2">
-								<div></div>
-							</div>
-							<div class="doorKeyholeBox">
-								<div class="bellText">MM</div>
-								<div class="doorbell"></div>
-							</div>
-							<button id="doorBtnIn" class="animated fadeIn">开门有惊喜</button>
-							<!-- <div class="doorBtngroup  fadeInUp">
-								<button id="doorBtnIn">开门有惊喜</button>
-								<button>走啦</button>
-							</div> -->
-	                    </div>
-	                    <div class="door-face-3"></div>
-	                </div>
-	            </div>
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	      	<div class="swiper-slide">
+	      	  	今天是个重要的日子。
+	      	  	<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">内容</p>	
+	      	</div>
+	      	<div class="swiper-slide">
+	      	  	陪我一路走来。	
+	      	</div>
+	      	<div class="swiper-slide">
+	      	 	为了我们你付出了很多
+	      	</div>
+	        <div class="swiper-slide doorSlide">
+		      	<div id="doorBox" class="door-box">
+				    <!-- <div class="wall">
+				        <div class="door-border">
+				            <div class="door-frame">
+				                <div id="door" class="door">
+				                    <div id="light" class="light" style="opacity: .8;" hidden=""></div>
+				                    <div class="door-face-0"></div>
+				                    <div class="door-face-2"></div>            
+				                    <div class="door-face-1">
+				                    	<div class="doorNumber">1029</div>
+										<div class="doorHawkEye">
+											<div class="eyeCenter"></div>
+										</div>
+										<div class="doorBuckle buckle1">
+											<div></div>
+										</div>
+										<div class="doorBuckle buckle2">
+											<div></div>
+										</div>
+										<div class="doorKeyholeBox">
+											<div class="bellText">MM</div>
+											<div class="doorbell"></div>
+										</div>
+										<button id="doorBtnIn" class="animated fadeIn">开门有惊喜</button>
+				                    </div>
+				                    <div class="door-face-3"></div>
+				                </div>
+				            </div>
+				        </div>
+				    </div> -->
+				</div>
 	        </div>
 	    </div>
+	    <div class="nextPage animated bounce">︾</div>
 	</div>
-	<div class="RoomBox animated fadeIn">
-		<img class="blueballoon" src="images/blueballoon.png" alt="">
-		<img class="redballoon" src="images/redballoon.png" alt="">
-		<img class="GiftBox animated bounceInDown" src="images/giftbox.png" alt="">
-		<div class="Blessings">
-			<div class="happy animated slideInLeft"></div>
-			<div class="evryDay animated slideInRight">愿我妈咪心情可以如彩虹般美丽，身体棒棒哒。</div>
-			<div class="name animated slideInRight">--爱你的晓</div>
-		</div>
-		
-	</div>
-
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/swiper.animate1.0.3.min.js"></script>
 	<script src="js/index.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+	        direction: 'vertical',
+	        slidesPerView: 1,
+	        mousewheel: true,
+	        on: {//注册事件
+			    slideChange: function () {
+			      	console.log(this.activeIndex);
+			      	if(this.activeIndex=="3"){
+				      	$(".nextPage").css("display","none").removeClass(".bounceInDown");
+
+				      	$(".swiper-wrapper .swiper-slide").eq(3).find("#doorBox").empty();
+				      	$("#doorBox").css({
+							"background-color": "#A45B26"
+						})
+				      	var html=`<div class="wall animated fadeIn">
+							        <div class="door-border">
+							            <div class="door-frame">
+							                <div id="door" class="door">
+							                    <div id="light" class="light" style="opacity: .8;" hidden=""></div>
+							                    <div class="door-face-0"></div>
+							                    <div class="door-face-2"></div>            
+							                    <div class="door-face-1">
+							                    	<div class="doorNumber">1029</div>
+													<div class="doorHawkEye">
+														<div class="eyeCenter"></div>
+													</div>
+													<div class="doorBuckle buckle1">
+														<div></div>
+													</div>
+													<div class="doorBuckle buckle2">
+														<div></div>
+													</div>
+													<div class="doorKeyholeBox">
+														<div class="bellText">MM</div>
+														<div class="doorbell"></div>
+													</div>
+													<button id="doorBtnIn" class="animated fadeIn">开门有惊喜</button>
+							                    </div>
+							                    <div class="door-face-3"></div>
+							                </div>
+							            </div>
+							        </div>
+							    </div>`;
+						$(".swiper-wrapper .swiper-slide").eq(3).find("#doorBox").append(html);
+			      	
+			      	}else{
+			      		$(".nextPage").css("display","block").addClass(".bounceInDown");
+			      	}
+			    },
+			    init: function(){
+			        swiperAnimateCache(this); //隐藏动画元素 
+			        swiperAnimate(this); //初始化完成开始动画
+			    }, 
+			    slideChangeTransitionEnd: function(){ 
+			        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+			        //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+			    } 
+			},
+	    });
+	    $(".nextPage").click(function(){
+	    	swiper.slideNext();
+	    })
+	    
+	</script>
 </body>
 </html>

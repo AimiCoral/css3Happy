@@ -19,16 +19,18 @@ body,html{
 .door-box.active {
     animation: flyIntoRoom 1s both;
 }
-.door-box div {
+.door-box .wall div {
     position: absolute;
 }
 .wall {
+    position: absolute;
     left: 0; top: 0; right: 0; bottom: 46px;
     border-bottom: 3px solid #592D14;
     background-color: #F5F5F5;
     max-height: calc(1.8 * (414px - 80px));
     margin: auto;
     box-shadow: 0 -200px #F5F5F5;
+    transition:all  1s;
 }
 .door-border {
     top: 40px;
@@ -49,6 +51,7 @@ body,html{
     background-size:100% 100%;
     -webkit-perspective: 1200px;
     perspective: 1200px;
+
 }
 .door {
     left: 0; top: 0; right: 0;  bottom: 0;
@@ -143,6 +146,9 @@ body,html{
     margin: auto;
 }
 /*ziji*/
+#doorBtnIn{
+  animation-delay:1s;
+}
 .doorNumber{
 	position: absolute;
 	top:30px;
@@ -247,8 +253,17 @@ body,html{
     background-size:100% 100%;
     overflow: hidden;
     position: relative;
-	display: none;
-	/*margin:40px auto;*/
+	  /*display: none;*/
+	  margin:0 auto;
+    animation: bounce .5s forwards;
+}
+@keyframes bounce {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 .redballoon{
 	position: absolute;
@@ -392,10 +407,10 @@ body,html{
 	-webkit-animation-delay:2s;
 }
 .GiftBox{
-	width:100%;
+	/*width:100%;*/
 	height: 500px;
 	position: absolute;
-	right:30px;
+	right:1px;
 	bottom:50px;
 	z-index: 3;
 	animation-duration:5s;
@@ -572,7 +587,7 @@ body,html{
 .Blessings .happy{
 	height:50px;
 	background: url(../images/1.png) no-repeat;
-    background-size:100% 100%;
+  background-size:100% 100%;
 	animation-delay:5s;
 	-webkit-animation-delay:5s;
 }

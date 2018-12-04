@@ -15,7 +15,6 @@ body,html{
   position: relative;
   /*display: none;*/
   margin:0 auto;
-  animation: bounce .5s forwards;
 }
 .heart{
 	width: 30px;

@@ -18,11 +18,12 @@ $("body").click(function(e) {
 	$(this).append(html);
 })
 
-$('.RoomBox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', '.GiftBox', function(e) {
-	console.log("礼包动画执行完成");
-	var html = '<div class="openGift animated pulse">点击打开礼盒</div>'
-	$(".RoomBox").append(html);
-})
+// $('.RoomBox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', '.GiftBox', function(e) {
+// 	console.log("礼包动画执行完成");
+// 	var html = '<div class="openGift animated pulse">点击打开礼盒</div>'
+// 	$(".RoomBox").append(html);
+// })
+
 $('.RoomBox').on('click', '.openGift', function(e) {
 	console.log("打开礼盒");
 	$(".openGift").css({

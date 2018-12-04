@@ -7,15 +7,15 @@ body,html{
 	overflow: hidden;
 }
 .RoomBox{
-	max-width: 100%;
-    width: 414px;height: 100%;
-    background: url(../images/bj1.jpg) no-repeat;
-    background-size:100% 100%;
-    overflow: hidden;
-    position: relative;
-	  /*display: none;*/
-	  margin:0 auto;
-    animation: bounce .5s forwards;
+  width:100%;
+  height: 100%;
+  background: url(../images/bj1.jpg) no-repeat;
+  background-size:100% 100%;
+  overflow: hidden;
+  position: relative;
+  /*display: none;*/
+  margin:0 auto;
+  animation: bounce .5s forwards;
 }
 @keyframes bounce {
     from {
@@ -170,9 +170,10 @@ body,html{
 	/*width:100%;*/
 	height: 500px;
 	position: absolute;
-	right:1px;
+	left:50%;
 	bottom:50px;
 	z-index: 3;
+  margin-left: -137px;
 	animation-duration:5s;
 	-webkit-animation-duration:5s; /* Safari 和 Chrome */
 }
@@ -338,7 +339,7 @@ body,html{
 .Blessings{
 	position: absolute;
 	/*bottom:20px;*/
-	top:80%;
+	top:35%;
 	left:0;
 	right:0;
 	font-size:16px;
@@ -369,3 +370,407 @@ body,html{
 	animation-delay:5.5s;
 	-webkit-animation-delay:5.5s;
 }
+
+/*swiper*/
+.swiper-box{
+        max-width:414px;
+        width: 100%;
+        max-height:736px; 
+        height: 100%;
+        margin:0 auto;
+      }
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .swiper-slide {
+        font-size: 18px;
+        background:#fff;
+      position:relative;
+        /* Center slide text vertically */
+       /* display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;*/
+      }
+      .nextPage{
+        width:2rem;
+        height:2rem;
+        /*background:rgba(0,0,0,0.3);*/
+        border-radius: 50%;
+        position: absolute;
+        bottom:1rem;
+        left:50%;
+        margin-left: -1rem;
+        z-index:999;
+        font-size: 20px;
+        line-height: 2.5rem;
+        text-align: center;
+        animation-iteration-count:infinite;
+      }
+      
+      .slide1{
+      background:url(../images/timg1.jpg) no-repeat;
+      background-size:100% 100%;
+    }
+      .slide2{
+        width: 100%;
+        height: 100%;
+        background:url(../images/timg21.png) no-repeat;
+      background-size:100% auto;
+        /*background: #fff;*/
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    .slide2 .backg{
+      width: 70%;
+      height:auto;
+      position: absolute;
+      bottom:3%;
+      right:0;
+    }
+    .swiper-slide:nth-of-type(3){
+      background: linear-gradient(#50C9F0, #fff);
+    }
+    .slide3{
+        width: 100%;
+        height: 100%;
+        background:url(../images/timg3.png) no-repeat;
+      background-size:100% auto;
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    
+      .Nightext{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left:10px;
+        z-index: 2;
+      }
+      .Nightext1{
+      top:33%;
+      }
+      .Nightext2{
+      top:52%;
+      }
+      .Nightext3{
+      top:60%;
+      }
+      .lx1{
+        width:100%;
+      height: auto;
+        position: absolute;
+        top:38%;
+        left:0px;
+      }
+      .lx2{
+        width:100%;
+      height: auto;
+        position: absolute;
+        top:43%;
+        left:0px;
+      }
+      .lx3{
+        width:100%;
+      height: auto;
+        position: absolute;
+        top:48%;
+        left:0px;
+      }
+      .lx4{
+        width:100%;
+      height: auto;
+        position: absolute;
+        top:53%;
+        left:0px;
+      }
+      
+    .redenvel_main{
+      width:100%;
+      height: 100%;
+      background: url(../images/bj2.png) no-repeat;
+      background-size:100% auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .redenvel_item{
+      position: absolute;
+      top:-20px;
+    }
+    .redenvel_item img{
+      width: 100%;
+      height: auto;
+    }
+    .ceshi{
+      width:143px;
+      height:143px;
+
+    }
+    .ceshi .iconfont{
+      font-size: 143px;
+    }
+    .icon-dangaosolid{
+      color: #ED87AC;
+    }
+    .icon-dangao{
+      color: #EA2E48;
+    }
+    .icon-icon-test{
+      color: #D1B68A;
+    }
+    .count{
+      width:100px;
+      height: 100px;
+      font-size: 50px;
+      position: absolute;
+      right:10px;
+      top:10px; 
+    }
+    .pinkBack{
+      /*background: #FC9DCE;*/
+      background: -webkit-linear-gradient(#FC9DCE, #fff); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(#FC9DCE, #fff); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(#FC9DCE, #fff); /* Firefox 3.6 - 15 */
+        background: linear-gradient(#FC9DCE, #fff); /* 标准的语法（必须放在最后） */
+        position: relative;
+    }
+    .redenvel_title{
+      width: 80%;
+      position: absolute;
+      top:35%;
+      margin-left:10%;
+    }
+    .redenvel_title img{
+      width: 100%;
+      height: auto;
+    }
+    .redenvel_count{
+      width: 50px;
+      text-align: center;
+      font-size: 50px;
+      position: absolute;
+      top:50%;
+      left:50%;
+      color: #fff;
+      margin-left: -25px;
+      animation-iteration-count:infinite;
+    }
+    .diyPrompt,.LuckyPrompt{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0;
+      left:0;
+      background:rgba(0,0,0,0.5);
+      z-index: 999;
+      display: none;
+    }
+    .prompt_main{
+      width: 80%;
+      height: 110px;
+      background: #fff;
+      border-radius: 3px;
+      position: absolute;
+      top:50%;
+      margin-top: -55px;
+      margin-left: 10%;
+      font-size: 14px;
+    }
+    .prompt_main .close{
+      position: absolute;
+      top:5px;
+      right:10px;
+      font-size: 18px;
+    }
+    .prompt_main_title{
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 1px solid #ddd;
+      padding:0 10px;
+      font-weight:600;
+      color: #666060;
+      box-sizing: border-box;
+    }
+    .prompt_main_cont{
+      width: 100%;
+      height:80px;
+      line-height:30px;
+      padding:10px;
+      box-sizing: border-box;
+    }
+    .rightFont{
+      width:50px;
+      height:50px;
+      background: url(../images/fd1.png) no-repeat;
+      background-size: auto 100%;
+      position: absolute;
+      right:0;
+      bottom:0; 
+    }
+    .Luckynum{
+      width: 230px;
+      text-align: center;
+      position: absolute;
+      font-size:20px;
+      top:45%;
+      left:50%;
+      color: #fff;
+      margin-left: -115px;
+      display: none;
+    }
+    .Luckylook{
+      width:100px;
+      height:100px;
+      background: url(../images/fd1.png) no-repeat;
+      background-size: auto 100%;
+      position: absolute;
+      top:50%;
+      left:50%;
+      margin-left: -50px;
+      display: none;
+      animation-iteration-count:infinite;
+      z-index: 90;
+    }
+    .Lucky_title{
+      width: 100%;
+      height:40px;
+      line-height:40px;
+      font-size: 16px;
+      text-align: center;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      color: #F05550;
+      border:none!important;
+    }
+    .Lucky_title .close{
+      position: absolute;
+      top:5px;
+      right:10px;
+      font-size: 18px;
+    }
+    .Luckylist{
+      width:90%;
+      max-height:80%;
+      background: #fff;
+      border-radius: 3px;
+      padding:10px;
+      list-style:none;
+      font-size: 14px;
+      position: absolute;
+      top:50%;
+      margin-top:0px;
+      margin-bottom: 0px;
+      margin-left:5%;
+      box-sizing: border-box;
+      overflow-y:auto;
+    }
+    .Luckylist li{
+      list-style: none;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    .Luckylist li:last-of-type{
+      margin-bottom: 0px;
+      border-bottom:none;
+    }
+    .LuckyImg{
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      overflow: hidden;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+    .LuckyImg img{
+      width:100%;
+      height: auto;
+    }
+    .Luckytext{
+      display: inline-block;
+      width: calc(100% - 70px);
+      vertical-align: middle;
+    }
+    .goAgainbtn{
+      width: 120px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background: #F05550;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 3px;
+      position: absolute;
+      bottom: 10px;
+      left:10px;
+    }
+    .winter{
+      z-index: 5;
+    }
+    .winter1{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top:35%;
+      left:0;
+    }
+    .winter2{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top:43%;
+      left:0;
+    }
+    .winter3{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top:51%;
+      left:0;
+
+    }
+    .musicBox{
+      width:35px;
+      height:35px;
+      background:#fff;
+      border-radius: 50%;
+      position:absolute;
+      top:10px;
+      right:10px;
+      z-index: 9999;
+      text-align: center;
+      line-height: 35px;
+      color: #FA6481;
+      animation:iconRotat 5s infinite linear;
+    }
+    .musicBox .iconfont{
+      font-size:22px;
+    }
+    .musicBox .icon-yinletingzhi24px{
+      color: #C4C4C4;
+    }
+    .icon-yinle{
+      /*animation:iconRotat 3s infinite;*/
+    }
+    @keyframes iconRotat {
+      0%{
+        transform:rotate(0deg);
+      }
+      100%{
+        transform:rotate(360deg);
+      }
+    }

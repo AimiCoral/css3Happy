@@ -66,13 +66,46 @@
 						</div>
 					</div>
 					<div class="LuckyPrompt">
-						<ul class="Luckylist">
-							<li class="Lucky_title">福气多多<div class="close">×</div></li>
-							<!-- <li>
-								<div class="LuckyImg"><img src="images/dd.jpg" alt=""></div>
-								<div class="Luckytext">生日快乐，身体健康。永远18岁</div>
-							</li> -->
-						</ul>
+						<div class="LuckylistBox">
+							<div class="Lucky_title">福气多多 <div class="close">×</div></div>
+							<ul class="Luckylist">
+								<!-- <li class="Lucky_title">福气多多<div class="close">×</div></li> -->
+								<li>
+									<div class="LuckyImg"><img src="images/dd.jpg" alt=""></div>
+									<div class="Luckytext">生日快乐，身体健康。永远18岁</div>
+								</li>
+								<li>
+									<div class="LuckyImg"><img src="images/dd.jpg" alt=""></div>
+									<div class="Luckytext">生日快乐，身体健康。永远18岁</div>
+								</li>
+								<li>
+									<div class="LuckyImg"><img src="images/dd.jpg" alt=""></div>
+									<div class="Luckytext">生日快乐，身体健康。永远18岁</div>
+								</li>
+								<li>
+									<div class="LuckyImg"><img src="images/dd.jpg" alt=""></div>
+									<div class="Luckytext">生日快乐，身体健康。永远18岁</div>
+								</li>
+								<li>
+									<div class="LuckyImg"><img src="images/dd.jpg" alt=""></div>
+									<div class="Luckytext">生日快乐，身体健康。永远18岁</div>
+								</li>
+								<li>
+									<div class="LuckyImg"><img src="images/dd.jpg" alt=""></div>
+									<div class="Luckytext">生日快乐，身体健康。永远18岁</div>
+								</li>
+								<li>
+									<div class="LuckyImg"><img src="images/dd.jpg" alt=""></div>
+									<div class="Luckytext">生日快乐，身体健康。永远18岁</div>
+								</li>
+								<li>
+									<div class="LuckyImg"><img src="images/dd.jpg" alt=""></div>
+									<div class="Luckytext">生日快乐，身体健康。永远18岁</div>
+								</li>
+
+							</ul>
+						</div>
+						
 					</div>
 		      	</div>
 		    </div>
@@ -86,6 +119,7 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script src="js/swiper.animate1.0.3.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
 	<script src="js/index.js"></script>
 	<script>
 		var rW = $(".redenvel_main").width(),
@@ -149,6 +183,7 @@
 		var swiper = new Swiper('.swiper-container', {
 	        direction: 'vertical',
 	        slidesPerView: 1,
+	        spaceBetween:30,
 	        mousewheel: true,
 	        on: {//注册事件
 			    slideChange: function () {
@@ -278,7 +313,7 @@
     		$(".diyPrompt").css("display",'block').find(".prompt_main_cont").text("怎么没有福包呢，你没有去点福包吧。");
     		$(".diyPrompt .goAgainbtn").css("display",'block');
     	}else{
-    		$(".Luckylist li:not(:first-child)").remove();
+    		$(".Luckylist").empty();
     		var c=[];
     		var m;
     		// if(Luckynum>6){
@@ -303,8 +338,8 @@
 				$(".Luckylist").append(html)
     		}
     		$(".LuckyPrompt").css({"display":"block"});
-		   	var lH=$(".Luckylist").height();
-		   	$(".Luckylist").css({"margin-top":-(lH/2)});
+		   	var lH=$(".LuckylistBox").height();
+		   	$(".LuckylistBox").css({"margin-top":-(lH/2)});
     	}
     })
     $(".diyPrompt .close").click(function(){
@@ -325,6 +360,15 @@
     		$(this).css({"animation-play-state":"running","-webkit-animation-play-state":"running"});
     	}
     })
+    $('.LuckylistBox').niceScroll({
+	    cursorcolor: "#E8E8E8",//#CC0071 光标颜色
+	    cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+	    touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+	    cursorwidth: "5px", //像素光标的宽度
+	    cursorborder: "0", // 游标边框css定义
+	    cursorborderradius: "5px",//以像素为光标边界半径
+	    autohidemode: false //是否隐藏滚动条
+	});
 	</script>
 </body>
 </html>

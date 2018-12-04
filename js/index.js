@@ -1,54 +1,8 @@
 // 开门音效mp3
 // var eleAudioOpen = document.getElementById('audioOpen');
 // 开门动画
-var percentDoor = 0;
+
 var heartNum = 0;
-var fnOpenDoor = function() {
-	percentDoor++;
-	// 门完全打开后，进入下一个画面
-	if (percentDoor == 88) {
-		// $("#doorBox").addClass("animated bounceIn")
-
-		$(".wall").addClass("animated pulse").removeClass("pulse").addClass("fadeOut").remove();
-		percentDoor = 0
-
-		$("#doorBox").css({
-			"background-color": "#fff"
-		})
-		var RoomBox = `<div class="RoomBox">
-				<img class="blueballoon" src="images/blueballoon.png" alt="">
-				<img class="redballoon" src="images/redballoon.png" alt="">
-
-				<div class="Blessings">
-					<div class="happy animated slideInLeft"></div>
-					<div class="evryDay animated slideInRight">愿我妈咪心情可以如彩虹般美丽，身体棒棒哒。</div>
-					<div class="name animated slideInRight">--爱你的晓</div>
-				</div>
-
-			</div>`
-		$("#doorBox").append(RoomBox);
-		var GiftBox = '<img class="GiftBox animated bounceInDown" src="images/giftbox.png" alt="">'
-		$("#doorBox .RoomBox").append(GiftBox);
-		return;
-	}
-	// 门打开
-	$("#door").css({
-		"transform": "rotateY(" + (-90 * percentDoor / 100) + "deg)"
-	})
-
-	$("#light").removeAttr('hidden');
-	// 光线变化
-	$("#light").css({
-		"opacity": 0.8 - 0.9 * percentDoor / 200
-	})
-	setTimeout(fnOpenDoor, 40);
-};
-
-$('#doorBox').on('click', '#doorBtnIn', function(e) {
-
-	// $("#doorBtnIn").click(function() {
-	fnOpenDoor();
-})
 $("body").click(function(e) {
 	// console.log($(".heart").length);
 	if ($(".heart").length >= 15) {
@@ -56,28 +10,20 @@ $("body").click(function(e) {
 			$("body .heart").eq(i).remove();
 		}
 	}
-	var colorArr = ['#FF7979', '#FFE371', '#FF9555', '#FF76B9', '#7ED6FA', '#C67EFA'];
+	var colorArr = ['#fd4e4e', '#FFE371', '#fb6911', '#7ED6FA', '#C67EFA'];
 	var xx = e.clientX;
 	var yy = e.clientY - 20;
 	// console.log(xx,yy)
 	var html = '<div class="heart" style="top:' + yy + 'px;left:' + xx + 'px;color:' + colorArr[Math.floor(Math.random() * colorArr.length)] + '">❤</div>'
 	$(this).append(html);
 })
-// $(".messageBox1 .message").click(function() {
-// 	console.log("第一个语音")
-// })
-// $(".messageBox2 .message").click(function() {
-// 	console.log("第二个语音")
-// })
-// $(".messageBox3 .message").click(function() {
-// 	console.log("第三个语音")
-// })
-$('#doorBox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', '.RoomBox .GiftBox', function(e) {
+
+$('.RoomBox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', '.GiftBox', function(e) {
 	console.log("礼包动画执行完成");
 	var html = '<div class="openGift animated pulse">点击打开礼盒</div>'
 	$(".RoomBox").append(html);
 })
-$('#doorBox').on('click', '.RoomBox .openGift', function(e) {
+$('.RoomBox').on('click', '.openGift', function(e) {
 	console.log("打开礼盒");
 	$(".openGift").css({
 		"display": "none"

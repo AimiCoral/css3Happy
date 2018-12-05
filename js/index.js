@@ -1,10 +1,444 @@
-// 开门音效mp3
-// var eleAudioOpen = document.getElementById('audioOpen');
-// 开门动画
+var luckyArr = [{
+		"name": "bb",
+		"des": "老婆生日快乐"
+	}, {
+		"name": "dd",
+		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
+	}, {
+		"name": "jj",
+		"des": "妈妈，你每天都要笑哦"
+	}, {
+		"name": "dd",
+		"des": "天天天真快乐；年年年轻漂亮"
+	}, {
+		"name": "bb",
+		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
+	},
 
-var heartNum = 0;
+	{
+		"name": "bb",
+		"des": "老婆生日快乐"
+	}, {
+		"name": "dd",
+		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
+	}, {
+		"name": "jj",
+		"des": "妈妈，你每天都要笑哦"
+	}, {
+		"name": "dd",
+		"des": "天天天真快乐；年年年轻漂亮"
+	}, {
+		"name": "bb",
+		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
+	},
+
+	{
+		"name": "bb",
+		"des": "老婆生日快乐"
+	}, {
+		"name": "dd",
+		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
+	}, {
+		"name": "jj",
+		"des": "妈妈，你每天都要笑哦"
+	}, {
+		"name": "dd",
+		"des": "天天天真快乐；年年年轻漂亮"
+	}, {
+		"name": "bb",
+		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
+	},
+
+	{
+		"name": "bb",
+		"des": "老婆生日快乐"
+	}, {
+		"name": "dd",
+		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
+	}, {
+		"name": "jj",
+		"des": "妈妈，你每天都要笑哦"
+	}, {
+		"name": "dd",
+		"des": "天天天真快乐；年年年轻漂亮"
+	}, {
+		"name": "bb",
+		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
+	},
+
+	{
+		"name": "bb",
+		"des": "老婆生日快乐"
+	}, {
+		"name": "dd",
+		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
+	}, {
+		"name": "jj",
+		"des": "妈妈，你每天都要笑哦"
+	}, {
+		"name": "dd",
+		"des": "天天天真快乐；年年年轻漂亮"
+	}, {
+		"name": "bb",
+		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
+	},
+
+	{
+		"name": "bb",
+		"des": "老婆生日快乐"
+	}, {
+		"name": "dd",
+		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
+	}, {
+		"name": "jj",
+		"des": "妈妈，你每天都要笑哦"
+	}, {
+		"name": "dd",
+		"des": "天天天真快乐；年年年轻漂亮"
+	}, {
+		"name": "bb",
+		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
+	},
+
+	{
+		"name": "bb",
+		"des": "老婆生日快乐"
+	}, {
+		"name": "dd",
+		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
+	}, {
+		"name": "jj",
+		"des": "妈妈，你每天都要笑哦"
+	}, {
+		"name": "dd",
+		"des": "天天天真快乐；年年年轻漂亮"
+	}, {
+		"name": "bb",
+		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
+	},
+
+	{
+		"name": "bb",
+		"des": "因为有你，我的世界才美丽，祝老婆大人生日快乐！"
+	},
+
+	{
+		"name": "bb",
+		"des": "爱你无需深情的言语，只要我们一直手牵手走下去就足矣"
+	},
+
+	{
+		"name": "bb",
+		"des": "一路走来，蒙你辛劳操持、相濡以沫、让我有这温馨的家，老婆你辛苦了"
+	},
+
+	{
+		"name": "bb",
+		"des": "祝老婆生日快乐,爱你!"
+	},
+
+	{
+		"name": "bb",
+		"des": "愿所有的快乐所有的幸福所有的温馨所有的好运围绕在你身边。生日快乐！"
+	},
+];
+
+var rW = $(".redenvel_main").width(),
+	rH = $(".redenvel_main").height();
+//飘落物体的可能性
+var fd1 = '<svg class="icon fdImg" aria-hidden="true"><use xlink:href="#icon-fudai"></use></svg>';
+var dg2 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-icon-test"></use></svg>';
+var dg3 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-caomeidangao"></use></svg>';
+var dg4 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhibeidangao"></use></svg>';
+var dg5 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-sanjiaodangao"></use></svg>';
+var dg6 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-musidangao"></use></svg>';
+var dg7 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-dangaocupcake"></use></svg>';
+var itemArr = [dg2, dg3, fd1, dg4, dg5, dg6, dg7];
+var basePadding = 15;
+var num = 0;
+var count = 3;
+var fourSetInter;
+var countSetInter;
+var Luckynum;
+var zoomsetTime,
+	foursetTime;
+var openGiftsetTime;
+var happyAudio = document.getElementById("happyAudio");
+var blessAudio = document.getElementById("blessAudio");
+var pageIndex, //当前页数
+	musicOpen = true; //音乐是否打开
+
+setTimeout(function() {
+	$(".loading").css("display", "none");
+	happyAudio.play();
+}, 3000)
+
+var swiper = new Swiper('.swiper-container', {
+	direction: 'vertical',
+	slidesPerView: 1,
+	spaceBetween: 30,
+	mousewheel: true,
+	on: { //注册事件
+		slideChange: function() {
+			console.log(this.activeIndex);
+			pageIndex = this.activeIndex;
+			if (this.activeIndex == "3") {
+				console.log(blessAudio.play())
+				if (musicOpen) {
+					blessAudio.play();
+				} else {
+					blessAudio.pause();
+				}
+				happyAudio.pause();
+				LuckyInit();
+				clearTimeout(openGiftsetTime);
+			} else {
+				if (musicOpen) {
+					happyAudio.play();
+				} else {
+					happyAudio.pause();
+				}
+				blessAudio.pause();
+				//点福包
+				clearInterval(fourSetInter);
+				clearInterval(countSetInter);
+				clearTimeout(foursetTime);
+				clearTimeout(zoomsetTime);
+				clearTimeout(openGiftsetTime);
+				$(".LuckyPrompt").css({
+					"display": "none"
+				});
+				$(".diyPrompt").css({
+					"display": "none"
+				});
+				if (this.activeIndex == "2") {
+					//礼包
+					$(".RoomBox").find(".openGift").remove();
+					$(".Blessings").css("display", "none");
+					$(".RoomBox").find(".careBox").remove();
+					openGiftsetTime = setTimeout(function() {
+						var openGift = '<div class="openGift animated pulse">点击打开礼盒</div>'
+						$(".RoomBox").append(openGift);
+					}, 5000)
+				}
+			} //else 不等于最后slide
+		},
+		init: function() {
+			swiperAnimateCache(this); //隐藏动画元素 
+			swiperAnimate(this); //初始化完成开始动画
+		},
+		slideChangeTransitionEnd: function() {
+			swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+			//this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+		}
+	},
+});
+
+
+function LuckyInit() {
+	Luckynum = 0;
+	count = 3;
+	$(".redenvel_count").text(count);
+	$(".Luckynum").text("共收到 " + Luckynum + " 个福包");
+	$(".diyPrompt").css("display", 'none');
+	$(".Luckynum").css("display", "none");
+	$(".Luckylook").css("display", "none");
+	var countHtml = '<div class="redenvel_count animated pulse">' + count + '</div>';
+	$(".pinkBack").append(countHtml);
+	$(".swiper-wrapper .swiper-slide").eq(3).find(".redenvel_main").empty();
+	countSetInter = setInterval(function() {
+		count--;
+		$(".redenvel_count").text(count);
+		if (count < 0) {
+			clearInterval(countSetInter);
+			$(".redenvel_count").remove();
+			$(".Luckynum").css("display", "block");
+		}
+	}, 1000)
+	num = 0;
+	foursetTime = setTimeout(function() {
+		fourSetInter = setInterval(function() {
+			addObj();
+		}, 500)
+		blessAudio.play();
+	}, 3000)
+	zoomsetTime = setTimeout(function() {
+		clearInterval(fourSetInter);
+		blessAudio.pause();
+		$(".redenvel_main").empty();
+		$(".diyPrompt").css("display", 'block').find(".prompt_main_cont").text("这一波祝福结束，快来看看都收到了什么祝福吧");
+		$(".diyPrompt .goAgainbtn").css("display", 'none');
+		setTimeout(function() {
+			$(".diyPrompt").css("display", 'none');
+			$(".Luckylook").css("display", 'block');
+		}, 1000)
+	}, 30000)
+}
+
+//生成mix-max的随机数
+function getRandom(min, max) {
+	return Math.round(Math.random() * (max - min) + min);
+}
+//红包的移动
+function redPackageBoxSpeed($el, time) {
+	$el.animate({
+			top: '110%',
+		},
+		time * 1000,
+		function() {
+			$el.remove();
+		}
+	);
+};
+//添加元素
+function addObj() {
+	num++;
+	var itemW = parseInt(Math.random() * 6 + 45);
+	var maxLeftPx = rW - itemW - basePadding * 2;
+	// var itemLeft = parseInt(Math.random() * (win - 0) + 0);
+	var rot = (parseInt(Math.random() * (45 - (-45)) - 45)) + "deg";
+	var time = parseInt(Math.random() * 4 + 6);
+	var Item = '<div class="redenvel_item item' + num + '">' + itemArr[Math.floor(Math.random() * itemArr.length)] + '</div>';
+	$(".redenvel_main").append(Item);
+	$('.item' + num + ' .icon').css({
+		"width": itemW + 'px',
+		"height": itemW + 'px'
+	})
+	// console.log(getRandom(basePadding, maxLeftPx))
+	$('.item' + num + '').css({
+		"left": getRandom(basePadding, maxLeftPx) + 'px',
+		"width": itemW + 'px',
+		"transform": "rotate(" + rot + ")",
+		"-webkit-transform": "rotate(" + rot + ")",
+		"-ms-transform": "rotate(" + rot + ")",
+		/* Internet Explorer */
+		"-moz-transform": "rotate(" + rot + ")",
+		/* Firefox */
+		"-webkit-transform": "rotate(" + rot + ")",
+		/* Safari 和 Chrome */
+		"-o-transform": "rotate(" + rot + ")" /* Opera */
+	})
+
+	redPackageBoxSpeed($('.item' + num + ''), time)
+
+}
+
+function getRandomLucky(arr, num) { //0-40之间随机num个数字
+	randoms = arr
+	while (true) {
+		var isExists = false;
+		// 获取一个10–100范围的数
+		var random = parseInt(Math.random() * 40)
+		// 判断当前随机数是否已经存在
+		for (var i = 0; i < randoms.length; i++) {
+			if (random === randoms[i]) {
+				isExists = true;
+				break;
+			}
+		}
+		// 如果不存在，则添加进去
+		if (!isExists)
+			randoms.push(random);
+		// 如果有10位随机数了，就跳出
+		if (randoms.length === num)
+			break;
+	}
+	return randoms
+}
+//福包的点击事件
+$(".redenvel_main").on("click", ".redenvel_item", function(e) {
+	e.preventDefault(); //阻止默认事件 
+	e.stopPropagation(); //阻止时间冒泡
+	console.log($(this).find(".fdImg"))
+	if ($(this).find(".fdImg").length > 0) {
+		if ($(this).find(".fdImg").attr("data-active")) {
+			return;
+		} else {
+			$(this).find(".fdImg").attr("data-active", true);
+			Luckynum++;
+		}
+	} else {
+		return;
+	}
+	$(".Luckynum").text("共收到 " + Luckynum + " 个福包")
+})
+$(".redenvel_main").click(function(e) {
+	e.preventDefault(); //阻止默认事件 
+	e.stopPropagation(); //阻止时间冒泡
+})
+//查看福包点击
+$(".Luckylook").click(function(e) {
+	e.stopPropagation();
+	if (Luckynum == 0) {
+		$(".diyPrompt").css("display", 'block').find(".prompt_main_cont").text("怎么没有福包呢，你没有去点福包吧。");
+		$(".diyPrompt .goAgainbtn").css("display", 'block');
+	} else {
+		$(".LuckyImgBox").empty();
+		$(".LuckyText").text("");
+		var crr = [];
+		getRandomLucky(crr, Luckynum);
+		for (var i = 0; i < crr.length; i++) {
+			let m = crr[i];
+			var html = '<div class="LuckyImgc" data_nub="' + crr[i] + '"><img src="images/' + luckyArr[m].name + '.jpg" alt=""></div>'
+			$(".LuckyImgBox").append(html);
+		}
+		$(".LuckyImgc").height($(".LuckyImgc").width);
+		var cr = crr[0];
+		$(".LuckyText").text(luckyArr[cr].des);
+		$(".LuckyImgBox .LuckyImgc").eq(0).addClass("active");
+		$(".LuckyPrompt").css({
+			"display": "block"
+		});
+		var lH = $(".LuckylistBox").height();
+		$(".LuckylistBox").css({
+			"margin-top": -(lH / 2)
+		});
+	}
+})
+
+$(".diyPrompt .close").click(function() {
+	$(".diyPrompt").css("display", 'none');
+})
+$(".LuckyPrompt .close").click(function() {
+	$(".LuckyPrompt").css("display", 'none');
+})
+$(".goAgainbtn").click(function() {
+	LuckyInit();
+})
+//音乐点击事件
+$(".musicBox").click(function() {
+	if ($(this).find(".iconfont").hasClass("icon-yinle")) {
+		musicOpen = false;
+		$(this).find(".iconfont").removeClass("icon-yinle").addClass("icon-yinletingzhi24px");
+		$(this).css({
+			"animation-play-state": "paused",
+			"-webkit-animation-play-state": "paused"
+		});
+		happyAudio.pause();
+		blessAudio.pause();
+	} else {
+		musicOpen = true;
+		$(this).find(".iconfont").addClass("icon-yinle").removeClass("icon-yinletingzhi24px");
+		$(this).css({
+			"animation-play-state": "running",
+			"-webkit-animation-play-state": "running"
+		});
+		if (pageIndex == 3) {
+			blessAudio.play();
+		} else {
+			happyAudio.play();
+		}
+	}
+})
+//福包里面照片点击事件
+$(".LuckyImgBox").on("click", ".LuckyImgc", function() {
+	console.log($(this).attr("data_nub"));
+	$(this).siblings().removeClass("active");
+	$(this).addClass("active");
+	$(".LuckyText").text(luckyArr[$(this).attr("data_nub")].des);
+})
+
 $("body").click(function(e) {
-	// console.log($(".heart").length);
 	if ($(".heart").length >= 15) {
 		for (var i = 0; i < 10; i++) {
 			$("body .heart").eq(i).remove();
@@ -17,12 +451,6 @@ $("body").click(function(e) {
 	var html = '<div class="heart" style="top:' + yy + 'px;left:' + xx + 'px;color:' + colorArr[Math.floor(Math.random() * colorArr.length)] + '">❤</div>'
 	$(this).append(html);
 })
-
-// $('.RoomBox').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', '.GiftBox', function(e) {
-// 	console.log("礼包动画执行完成");
-// 	var html = '<div class="openGift animated pulse">点击打开礼盒</div>'
-// 	$(".RoomBox").append(html);
-// })
 
 $('.RoomBox').on('click', '.openGift', function(e) {
 	console.log("打开礼盒");

@@ -171,11 +171,9 @@ function LuckyInit() {
 		fourSetInter = setInterval(function() {
 			addObj();
 		}, 500)
-		blessAudio.play();
 	}, 3000)
 	zoomsetTime = setTimeout(function() {
 		clearInterval(fourSetInter);
-		blessAudio.pause();
 		$(".redenvel_main").empty();
 		$(".diyPrompt").css("display", 'block').find(".prompt_main_cont").text("这一波祝福结束，快来看看都收到了什么祝福吧");
 		$(".diyPrompt .goAgainbtn").css("display", 'none');
@@ -293,13 +291,16 @@ $(".Luckylook").click(function(e) {
 			var html = '<div class="LuckyImgc" data_nub="' + crr[i] + '"><img src="images/' + luckyArr[m].name + '.jpg" alt=""></div>'
 			$(".LuckyImgBox").append(html);
 		}
-		$(".LuckyImgc").height($(".LuckyImgc").width);
+
+		// $(".LuckyImgc").height($(".LuckyImgc").width);
 		var cr = crr[0];
 		$(".LuckyText").text(luckyArr[cr].des);
 		$(".LuckyImgBox .LuckyImgc").eq(0).addClass("active");
 		$(".LuckyPrompt").css({
 			"display": "block"
 		});
+		console.log($(".LuckylistBox").width()*0.15 - 4 +'px')
+		$(".LuckyImgc").height($(".LuckylistBox").width() * 0.15 - 4 +'px')
 		var lH = $(".LuckylistBox").height();
 		$(".LuckylistBox").css({
 			"margin-top": -(lH / 2)

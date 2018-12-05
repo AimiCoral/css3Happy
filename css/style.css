@@ -208,6 +208,7 @@ body,html{
 	text-align: center;
 	line-height: 30px;
 	z-index: 4;
+  font-size: 14px;
 	animation-iteration-count:infinite;
 	-webkit-animation-iteration-count:infinite; /* Safari 和 Chrome */
 }
@@ -627,13 +628,15 @@ body,html{
   box-sizing: border-box;
 }
 .rightFont{
-  width:40px;
-  height:40px;
-  background: url(../images/fd1.png) no-repeat;
-  background-size: auto 100%;
+  width:30px;
+  height:30px;
   position: absolute;
-  right:0;
-  bottom:0; 
+  right:8px;
+  bottom:8px; 
+}
+.rightFont .icon{
+  width:30px;
+  height:30px;
 }
 .Luckynum{
   width: 230px;
@@ -649,8 +652,7 @@ body,html{
 .Luckylook{
   width:100px;
   height:100px;
-  background: url(../images/fd1.png) no-repeat;
-  background-size: auto 100%;
+  padding:10px;
   position: absolute;
   top:50%;
   left:50%;
@@ -658,6 +660,10 @@ body,html{
   display: none;
   animation-iteration-count:infinite;
   z-index: 90;
+}
+.Luckylook .icon{
+  width:80px;
+  height:80px;
 }
 .LuckylistBox{
   width:90%;
@@ -694,19 +700,19 @@ body,html{
   flex-wrap:wrap;
 }
 .LuckyImgc{
-  width: 18%;
-  height:63.46px;
+  width: 15%;
+  /*height:63.46px;*/
   overflow: hidden;
-  border-radius:5px;
+  border-radius:50%;
   border:1px solid #ddd;
-  margin-right:2.5%;
+  margin-right:2%;
   box-sizing: border-box;
   margin-bottom: 15px;
 }
 .LuckyImgc.active{
   border:2px solid #F05550;
 }
-.LuckyImgc:nth-of-type(5n){
+.LuckyImgc:nth-of-type(6n){
   margin-right:0px;
 }
 .LuckyImgc img{
@@ -715,7 +721,7 @@ body,html{
 }
 .LuckyText{
   min-height:80px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 25px;
 }
 .Luckylist{

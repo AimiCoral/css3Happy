@@ -299,8 +299,9 @@ $(".Luckylook").click(function(e) {
 		$(".LuckyPrompt").css({
 			"display": "block"
 		});
-		console.log($(".LuckylistBox").width()*0.15 - 4 +'px')
-		$(".LuckyImgc").height($(".LuckylistBox").width() * 0.15 - 4 +'px')
+		// console.log($(".LuckylistBox").width()*0.15 - 2 +'px')
+		$(".LuckyImgc").height($(".LuckylistBox").width() * 0.15 - 2 +'px')
+		$(".LuckyImgc.active").height($(".LuckylistBox").width() * 0.15 - 4 +'px')
 		var lH = $(".LuckylistBox").height();
 		$(".LuckylistBox").css({
 			"margin-top": -(lH / 2)

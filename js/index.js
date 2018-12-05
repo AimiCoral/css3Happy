@@ -1,147 +1,58 @@
 var luckyArr = [{
-		"name": "bb",
-		"des": "老婆生日快乐"
-	}, {
-		"name": "dd",
-		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
-	}, {
-		"name": "jj",
-		"des": "妈妈，你每天都要笑哦"
-	}, {
-		"name": "dd",
-		"des": "天天天真快乐；年年年轻漂亮"
-	}, {
-		"name": "bb",
-		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
-	},
-
-	{
-		"name": "bb",
-		"des": "老婆生日快乐"
-	}, {
-		"name": "dd",
-		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
-	}, {
-		"name": "jj",
-		"des": "妈妈，你每天都要笑哦"
-	}, {
-		"name": "dd",
-		"des": "天天天真快乐；年年年轻漂亮"
-	}, {
-		"name": "bb",
-		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
-	},
-
-	{
-		"name": "bb",
-		"des": "老婆生日快乐"
-	}, {
-		"name": "dd",
-		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
-	}, {
-		"name": "jj",
-		"des": "妈妈，你每天都要笑哦"
-	}, {
-		"name": "dd",
-		"des": "天天天真快乐；年年年轻漂亮"
-	}, {
-		"name": "bb",
-		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
-	},
-
-	{
-		"name": "bb",
-		"des": "老婆生日快乐"
-	}, {
-		"name": "dd",
-		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
-	}, {
-		"name": "jj",
-		"des": "妈妈，你每天都要笑哦"
-	}, {
-		"name": "dd",
-		"des": "天天天真快乐；年年年轻漂亮"
-	}, {
-		"name": "bb",
-		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
-	},
-
-	{
-		"name": "bb",
-		"des": "老婆生日快乐"
-	}, {
-		"name": "dd",
-		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
-	}, {
-		"name": "jj",
-		"des": "妈妈，你每天都要笑哦"
-	}, {
-		"name": "dd",
-		"des": "天天天真快乐；年年年轻漂亮"
-	}, {
-		"name": "bb",
-		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
-	},
-
-	{
-		"name": "bb",
-		"des": "老婆生日快乐"
-	}, {
-		"name": "dd",
-		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
-	}, {
-		"name": "jj",
-		"des": "妈妈，你每天都要笑哦"
-	}, {
-		"name": "dd",
-		"des": "天天天真快乐；年年年轻漂亮"
-	}, {
-		"name": "bb",
-		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
-	},
-
-	{
-		"name": "bb",
-		"des": "老婆生日快乐"
-	}, {
-		"name": "dd",
-		"des": "老妈,你又长大一岁，终于成年了，哈哈。"
-	}, {
-		"name": "jj",
-		"des": "妈妈，你每天都要笑哦"
-	}, {
-		"name": "dd",
-		"des": "天天天真快乐；年年年轻漂亮"
-	}, {
-		"name": "bb",
-		"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
-	},
-
-	{
-		"name": "bb",
-		"des": "因为有你，我的世界才美丽，祝老婆大人生日快乐！"
-	},
-
-	{
-		"name": "bb",
-		"des": "爱你无需深情的言语，只要我们一直手牵手走下去就足矣"
-	},
-
-	{
-		"name": "bb",
-		"des": "一路走来，蒙你辛劳操持、相濡以沫、让我有这温馨的家，老婆你辛苦了"
-	},
-
-	{
-		"name": "bb",
-		"des": "祝老婆生日快乐,爱你!"
-	},
-
-	{
-		"name": "bb",
-		"des": "愿所有的快乐所有的幸福所有的温馨所有的好运围绕在你身边。生日快乐！"
-	},
-];
+	"name": "bb",
+	"des": "老婆生日快乐٩(๑>◡<๑)۶ 爱你!"
+}, {
+	"name": "dd",
+	"des": "老妈,你又长大一岁，终于成年了，哈哈。"
+}, {
+	"name": "jj",
+	"des": "妈妈，你每天都要开心哦φ(>ω<*) "
+}, {
+	"name": "bb",
+	"des": "老婆今天你做主,为你奋斗一辈子！我洗衣我擦地，让俺干啥都愿意！"
+}, {
+	"name": "dd",
+	"des": "话不多说,请注意收款。"
+}, {
+	"name": "dd",
+	"des": "天冷了，出门多穿点，走路小心点。"
+}, {
+	"name": "jj",
+	"des": "送你一颗开心果，愿你开心快乐每一天；送你一束解忧花，愿您平安健康康每一天；送你一杯幸福水，愿你幸福美满每一天。"
+}, {
+	"name": "bb",
+	"des": "因为有你，我的世界才美丽，祝老婆大人生日快乐！"
+}, {
+	"name": "dd",
+	"des": "老妈，想你了。真想快点可以回家。"
+}, {
+	"name": "jj",
+	"des": "妈妈，想你，要抱抱。"
+}, {
+	"name": "bb",
+	"des": "爱你无需深情的言语，只要我们一直手牵手走下去就足矣"
+}, {
+	"name": "jj",
+	"des": "妈妈，有些话当着你的面说不出口，说不出口的话只能用心去做到。妈妈，我爱你ღ"
+}, {
+	"name": "dd",
+	"des": "老妈，生日快乐哟，照顾好自己。"
+}, {
+	"name": "bb",
+	"des": "一路走来，蒙你辛劳操持、相濡以沫、让我有这温馨的家，老婆你辛苦了"
+}, {
+	"name": "jj",
+	"des": "都说女儿是父母的小棉袄，可是我却不能陪在爸妈的身边，妈妈谢谢你支持我的选择。"
+}, {
+	"name": "dd",
+	"des": "谢谢妈妈允许我胡闹，原谅我的错误，只有爸妈才会这样包容着我。妈妈我爱你。"
+}, {
+	"name": "bb",
+	"des": "愿所有的快乐所有的幸福所有的温馨所有的好运围绕在你身边。生日快乐！"
+}, {
+	"name": "jj",
+	"des": "红包已送达，请注意查收✧(＾＿－✿ "
+}];
 
 var rW = $(".redenvel_main").width(),
 	rH = $(".redenvel_main").height();
@@ -180,10 +91,10 @@ var swiper = new Swiper('.swiper-container', {
 	mousewheel: true,
 	on: { //注册事件
 		slideChange: function() {
-			console.log(this.activeIndex);
+			// console.log(this.activeIndex);
 			pageIndex = this.activeIndex;
 			if (this.activeIndex == "3") {
-				console.log(blessAudio.play())
+				// console.log(blessAudio.play())
 				if (musicOpen) {
 					blessAudio.play();
 				} else {
@@ -327,8 +238,8 @@ function getRandomLucky(arr, num) { //0-40之间随机num个数字
 	randoms = arr
 	while (true) {
 		var isExists = false;
-		// 获取一个10–100范围的数
-		var random = parseInt(Math.random() * 40)
+		// 获取一个10–17范围的数
+		var random = parseInt(Math.random() * 17)
 		// 判断当前随机数是否已经存在
 		for (var i = 0; i < randoms.length; i++) {
 			if (random === randoms[i]) {
@@ -349,7 +260,7 @@ function getRandomLucky(arr, num) { //0-40之间随机num个数字
 $(".redenvel_main").on("click", ".redenvel_item", function(e) {
 	e.preventDefault(); //阻止默认事件 
 	e.stopPropagation(); //阻止时间冒泡
-	console.log($(this).find(".fdImg"))
+	// console.log($(this).find(".fdImg"))
 	if ($(this).find(".fdImg").length > 0) {
 		if ($(this).find(".fdImg").attr("data-active")) {
 			return;
@@ -432,7 +343,7 @@ $(".musicBox").click(function() {
 })
 //福包里面照片点击事件
 $(".LuckyImgBox").on("click", ".LuckyImgc", function() {
-	console.log($(this).attr("data_nub"));
+	// console.log($(this).attr("data_nub"));
 	$(this).siblings().removeClass("active");
 	$(this).addClass("active");
 	$(".LuckyText").text(luckyArr[$(this).attr("data_nub")].des);
@@ -453,7 +364,7 @@ $("body").click(function(e) {
 })
 
 $('.RoomBox').on('click', '.openGift', function(e) {
-	console.log("打开礼盒");
+	// console.log("打开礼盒");
 	$(".openGift").css({
 		"display": "none"
 	})

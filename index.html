@@ -76,6 +76,17 @@
 		    -webkit-transform: scale(1.0);
 		  }
 		}
+		.icon {
+          /* 通过设置 font-size 来改变图标大小 */
+          /*width: 1em; height: 1em;*/
+          /* 图标和文字相邻时，垂直对齐 */
+          vertical-align: -0.15em;
+          /* 通过设置 color 来改变 SVG 的颜色/fill */
+          fill: currentColor;
+          /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+             normalize.css 中也包含这行 */
+          overflow: hidden;
+        }
 	</style>
 </head>
 <body>
@@ -177,7 +188,7 @@
 		    <!-- <div class="nextPage animated bounce">︾</div> -->
 		</div>
 	</div>
-	
+	<script src="fonts/iconfont.js"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script src="js/swiper.animate1.0.3.min.js"></script>
@@ -187,15 +198,14 @@
 		var rW = $(".redenvel_main").width(),
     	rH = $(".redenvel_main").height();
 	    //飘落物体的可能性
-	    var fd1 = '<img class="fdImg" src="images/fd1.png" alt="">';
-	    // var fd2 = '<img class="fdImg" src="images/fd2.png" alt="">';
-	    var dg1 = '<img src="images/dg1.png" alt="">';
-	    // var dg2 = '<img src="images/dg2.png" alt="">';
-	    var dg3 = '<img src="images/dg3.png" alt="">';
-	    var dg4 = '<img src="images/dg4.png" alt="">';
-	    var dg5 = '<img src="images/dg5.png" alt="">';
-	    // var dg6 = '<img src="images/dg6.png" alt="">';
-	    var arr=[dg1,dg3,fd1,dg5,dg4];
+	    var fd1 = '<svg class="icon fdImg" aria-hidden="true"><use xlink:href="#icon-fudai"></use></svg>';
+	    var dg2 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-icon-test"></use></svg>';
+	    var dg3 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-caomeidangao"></use></svg>';
+	    var dg4 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhibeidangao"></use></svg>';
+	    var dg5 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-sanjiaodangao"></use></svg>';
+	    var dg6 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-musidangao"></use></svg>';
+	    var dg7 = '<svg class="icon" aria-hidden="true"><use xlink:href="#icon-dangaocupcake"></use></svg>';
+	    var arr=[dg2,dg3,fd1,dg4,dg5,dg6,dg7];
 	   	var basePadding = 15;
 	   	var num =0;
 	   	var count=3;
@@ -229,6 +239,7 @@
       		foursetTime = setTimeout(function(){
       			fourSetInter = setInterval(function(){
 			    	addObj();
+
 			    },700)
       		},3000)
 		    zoomsetTime = setTimeout(function(){
@@ -321,13 +332,14 @@
     	var time = parseInt(Math.random() * 3 + 9);
     	var Item ='<div class="redenvel_item item'+num+'">'+arr[Math.floor(Math.random() * arr.length)]+'</div>';
     	$(".redenvel_main").append(Item);
-    	$('.item'+num+' .iconfont').css({
-    		"fontSize":itemW+ 'px'
+    	$('.item'+num+' .icon').css({
+    		"width":itemW+ 'px',
+    		"height":itemW+ 'px'
     	})
     	// console.log(getRandom(basePadding, maxLeftPx))
     	$('.item'+num+'').css({
     		"left":getRandom(basePadding, maxLeftPx) + 'px',
-    		"width":itemW,
+    		"width":itemW+ 'px',
     		"transform": "rotate(" + rot + ")",
 			"-webkit-transform": "rotate(" + rot + ")",
 			"-ms-transform": "rotate(" + rot + ")", /* Internet Explorer */
@@ -335,6 +347,7 @@
 			"-webkit-transform": "rotate(" + rot + ")",/* Safari 和 Chrome */
 			"-o-transform": "rotate(" + rot + ")" /* Opera */
     	})
+    	
     	redPackageBoxSpeed($('.item'+num+''),time)
 
     }
